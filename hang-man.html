@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="enb">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hang man</title>
+    <link rel="stylesheet" href="css-font/all.min.css">
+    <link rel="stylesheet" href="hang-man.css">
+</head>
+<body>
+    <main>
+        <div class="MsgForChangingLanguage hidden">
+                <div class="msg-holder">
+                    <p class="paragraph" data-key="changeKeyboardText"></p>
+                    <button class="doneInsideMsg" data-key="changeKeyboardBtn"></button>
+                </div>
+        </div>
+        <header class="p-relatve">
+            <i class=" fa-solid fa-repeat" id="repeat"></i>
+             <div class="header">
+                <p class="game-Title" data-key="gameName">hangman</p>
+                <p class="category-selected"></p>
+                <button class="menu">
+                    <i class=" fa-regular fa-bars"></i>
+                </button>
+                <div class="divForMenu hidden" id="menuDiv">
+
+                </div>
+            </div>
+        </header>
+        <section>
+            <div class="theWordChosenDiv">
+                <p class="TheWordChosen"></p>
+                <p class="ForExistingLetter"></p>
+            </div>
+            <div class="articles-div">
+                <article class="article-left-side p-relatve">
+                    <div class="StepsAndTime PsitionAbso">
+                        <p class="time">00:30</p>
+                        <p class="steps">3</p>
+                    </div>
+                    <div class="hangmanBody p-relatve"> 
+                        <div class="hangmanCaracter shen PsitionAbso hidden"></div>
+                        <div class="hangmanCaracter shenstander PsitionAbso hidden "></div>
+                        <div class="hangmanCaracter shen-hirozontal PsitionAbso hidden"></div>
+                        <div class="hangmanCaracter michna9a PsitionAbso hidden"></div>
+                        <div class="hangmanCaracter hable PsitionAbso hidden"></div>
+                        <div class="hangmanCaracter head PsitionAbso hidden"></div>
+                        <div class="hangmanCaracter body PsitionAbso hidden"></div>
+                        <div class="hangmanCaracter lefthand PsitionAbso hidden"></div>
+                        <div class="hangmanCaracter righthand PsitionAbso hidden"></div>
+                        <div class="hangmanCaracter leftleg PsitionAbso hidden"></div>
+                        <div class="hangmanCaracter rightleg PsitionAbso hidden"></div>
+                    </div>
+                </article>
+                <article class="article-right-side"></article>
+            </div>
+        </section>
+        <footer>
+        </footer>
+        <div class="gameStart" id="gamestart">
+                <div class="gameStartCenterDiv">
+                    <p data-key="GameTitle" class="GameTitle">the hungman</p>
+                    <div class="choseThelanguage div1">
+                        <p class="language-Text text1" data-key="changeLanguage">chose language</p>
+                        <select id="languageCategory"></select>
+                    </div>
+                    <div class="div2">
+                        <p class="category-text text2" data-key="changecategory">select category</p>
+                        <select name="categoryHolder"
+                         id="categorySelect"></select>
+                    </div>
+                    <button type="button" class="startBtn" data-key="StartBtn">start</button>
+                </div>
+            </div>
+        <div class="DivForRsultOfThegame hidden" id="resultDiv"></div>
+    </main>
+    <script src="hang-man.js"></script>
+</body>
+</html>

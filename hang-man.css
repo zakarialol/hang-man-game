@@ -1,0 +1,714 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    align-content: center;
+}
+html{
+    font-size: 16px;
+}
+section{
+    border-top: solid 1px gray;
+    border-bottom: solid 1px gray;
+    padding: var(--value-10px) 0px;
+}
+main{
+    max-width: 800px;
+    margin: 0 auto;
+}
+html{
+    font-size: 16px;
+}
+:root{
+    --color-blue:blue;
+    --color-black:black;
+    --color-green:#00b600;
+    --padding-20px:20px;
+    --value-2px: 4px;
+    --value-3px:4px;
+    --value-10px:10px;
+    --value-20px:20px;
+    --value-30px:30px;
+}
+main{
+    position: relative;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    background: white;
+    position: relative;
+}
+.article-left-side{
+    background: #f2f2f2;
+    min-height: 220px;
+}
+.article-right-side{
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    padding: var(--padding-20px);
+    gap: var(--padding-20px);
+}
+.articles-div{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+footer{
+    min-height: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    background: #f2f2f2;
+    margin-top: 10px;
+}
+.letter-style{
+    width: 40px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #009688;
+    color: white;
+    text-transform: capitalize;
+    font-weight: bold;
+    padding: 15px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.gameStart{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f2f2f2;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+.gameStartCenterDiv{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 25px;
+
+}
+#categorySelect,#languageCategory{
+    min-width: 160px;
+    text-align: center;
+    padding: 2px 20px;
+    border: none;
+    box-shadow: 0px 0px 5px 0px green;
+}
+.hidden{
+    display: none !important;
+}
+.startBtn{
+    font-size: 20px;
+    font-family: sans-serif;
+    padding: 2px 30px;
+    background: #00b600;
+    color: white;
+    border: none;
+    min-width: 115px;
+    border-radius: 5px;
+    text-transform: capitalize;
+    cursor: pointer;
+    letter-spacing: 2px;
+}
+.hangmanBody{
+    height:100%;
+    width: 100%;
+}
+.p-relatve{
+    position: relative;
+}
+.PsitionAbso{
+    position: absolute;
+}
+/* hangman body design */
+.shen{
+    width: var(--value-2px);
+    background: var(--color-black);
+    top: 10%;
+    bottom: 10%;
+    left: 35%;
+}
+.shenstander{
+    width: 10%;
+    height: var(--value-3px);
+    background: var(--color-black);
+    bottom: 10%;
+    left: 30%;
+}
+.shen-hirozontal{
+    width: 25%;
+    height: var(--value-3px);
+    background: var(--color-black);
+    top: 15%;
+    left: 35%;
+}
+.michna9a{
+    width: var(--value-2px);
+    height: 10%;
+    background: var(--color-black);
+    left: 60%;
+    top: 15%;
+}
+.hable{
+    width: 60px;
+    height: 60px;
+    border: solid var(--value-3px) var(--color-black);
+    border-style: dashed;
+    border-radius: 50%;
+    top: 25%;
+    left: calc(60% - 60px / 2);
+    rotate: 20deg;
+}
+.head{
+    width: 40px;
+    height: 40px;
+    border: solid var(--value-3px) var(--color-black);
+    border-radius: 50%;
+    top: 28%;
+    left: calc(60.5% - 40px / 2);
+}
+.body{
+    width: var(--value-2px);
+    background: var(--color-black);
+    top: calc(20% + 60px);
+    bottom: 25%;
+    left: 60%;
+}
+.lefthand{
+    width: 13%;
+    height: var(--value-2px);
+    background: var(--color-black);
+    left: 59%;
+    bottom: 45%;
+    rotate: -40deg;
+}
+.TheWordChosen{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    white-space: nowrap;
+    text-transform: capitalize;
+    word-spacing: 2px;
+    font-size: clamp(1rem, 1.1vw, 1.4rem)
+}
+.TheWordChosen div p{
+    display: inline;
+}
+.theWordChosenDiv{
+    margin-bottom: var(--value-20px);
+}
+.firstletter,
+.secondletter,
+.contenentText{
+    padding: 0px 5px;
+    color: green;
+    font-family: sans-serif;
+}
+.righthand{
+    width: 13%;
+    height: var(--value-2px);
+    background: var(--color-black);
+    left: 49.5%;
+    bottom: 45%;
+    rotate: 40deg;
+}
+.leftleg{
+    width: 15%;
+    height: var(--value-2px);
+    background: var(--color-black);
+    left: calc(46% + var(--value-2px));
+    bottom: 18%;
+    rotate: -40deg;
+}
+.rightleg{
+    width: 15%;
+    height: var(--value-2px);
+    background: var(--color-black);
+    left: calc(60% - var(--value-2px));
+    bottom: 18%;
+    rotate: 40deg;
+}
+.game-Title{
+    font-weight: bold;
+    text-transform: capitalize;
+    font-size: 30px;
+    color: #009688;
+    letter-spacing: 2px;
+}
+.category-selected{
+    font-weight: bold;
+    text-transform: capitalize;
+}
+header .category{
+    color: var(--color-green);
+    letter-spacing: 2px;
+    font-size: 25px;
+}
+footer input{
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-bottom: black solid 4px;
+    text-align: center;
+    font-size: 26px;
+    font-weight: bold;
+    font-family: monospace;
+    text-transform: uppercase;
+    pointer-events: none;  
+    cursor: not-allowed;
+}
+.failerLetter{
+    pointer-events: none;
+    background: #292929;
+}
+.letterHover{
+    box-shadow: 0px 0px 5px 5px #ccc;
+    transform: scale(1.2);
+}
+.letterDisabled{
+    background: gray;
+    /* cursor: pointer; */
+    pointer-events: none;
+}
+body *:not(input):not(textarea):not([contenteditable='true']){
+    caret-color: transparent;
+}
+.DivForRsultOfThegame{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: #f2f2f2;
+}
+.VectoryOrDeafait{
+    font-size: clamp(2rem, 6vw, 5rem);
+    color: green;
+    text-transform: capitalize;
+    font-family: serif;
+    font-weight: bold;
+}
+
+.exact{
+    font-size: clamp(1rem,2vw,4rem);
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+.wordfinal{
+    text-transform: capitalize;
+    margin-inline-start: 15px;
+    color: green;
+    letter-spacing: 2px;
+    font-weight: bold;
+    font-family: math;
+    font-size: 22px;
+}
+.resultOfTheGameDiv{
+    text-align: center;
+}
+.StartGameAgainBtn{
+    margin-top: 20px;
+    min-width: 125px;
+    border: none;
+    box-shadow: 0px 0px 5px 0px green;
+    background: green;
+    color: white;
+    font-size: 20px;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+.clr-border{
+    border-color: #009688;
+}
+.fa-regular{
+    font-weight: bold;
+    font-size: var(--value-30px);
+}
+header button{
+    border: none;
+    cursor: pointer;
+}
+.divForMenu{
+    position: absolute;
+    text-align: center;
+    inset-inline-end: 0;
+    /* right: 0; */
+    top: 100%;
+    min-width: 240px;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: calc(var(--value-10px) + 3px);
+    box-shadow: 0px 0px 5px 0px;
+    z-index: 9999;
+}
+.divForMenu .firstDiv,.SecondDiv{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin: 10px 0px;
+}
+.text1,.text2{
+    display: inline-block;
+    /* margin-inline-end: 15px; */
+}
+.MainDivForIcon .doneBtn{
+    /* margin-inline-start: 50%; */
+    margin-top: 10px;
+    font-family: bold;
+    font-size: 20px;
+    text-transform: capitalize;
+    /* transform: translateX(-50%); */
+}
+.div1,.div2{
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    gap: 10px
+}
+.MainDivForIcon button{
+    background: #009688;
+    color: white;
+    padding: 2px 10px;
+}
+.divForMenu p{
+    text-transform: capitalize;
+    letter-spacing: 1px;
+}
+.confirmationBtns{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: var(--value-10px);
+}
+.confirmationDiv{
+    box-shadow: 0px 0px 2px 0px;
+    padding: var(--padding-20px);
+}
+.btnYes,.btnNo{
+    min-width: 55px;
+    min-height: 25px;
+}
+header p{
+    display: inline;
+}
+.GameTitle{
+    font-size: 35px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    word-spacing: 15px;
+    color: var(--color-green);
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+.exact-holder{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0px;
+}
+.fromText{
+    margin-inline-end: 5px;
+}
+.startWithText,.EndOfword{
+    margin-inline-end: 5px;
+    margin-inline-start: 5px;
+}
+#selector{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+.VectoryOrDeafait.defeat{
+    color: red;
+    letter-spacing: 1px;
+    font-family: sans-serif;
+}
+.ForExistingLetter{
+    /* display: block !important; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 0px;
+    color: white;
+    font-weight: bold;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+    font-size: 18px;
+    background: black;
+    width: fit-content;
+    margin: var(--value-3px) auto;
+    /* padding: 3px 15px; */
+    border-radius: 5px;
+    transition: .5s ease;
+}
+.MsgForChangingLanguage{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    background: rgb(0, 0, 0, 0.6);
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 999;
+}
+.msg-holder{
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+}
+.doneInsideMsg{
+    padding: 3px 20px;
+    background: none;
+    border: none;
+    box-shadow: 0px 0px 2px 2px green;
+    text-transform: capitalize;
+    font-weight: bold;
+    letter-spacing: 1px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.MsgForChangingLanguage .paragraph{
+    margin-bottom: 10px;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+.MsgForChangingLanguage .msg-holder{
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+.StepsAndTime{
+    top: 0;
+    display: flex;
+    justify-content:space-between ;
+    left: 0 ;
+    right: 0 ;
+    padding: 0px 15px ;
+    margin-top: 5px;
+}
+.StepsAndTime .time ,.StepsAndTime .steps{
+    font-weight: bold;
+    background: white;
+    min-width: 70px;
+    padding: 2px 0px;
+    border-radius: 5px;
+    font-size: 20px;
+    background: #000000;
+    color: white;
+    text-align: center;
+    font-family: 'Font Awesome 5 Free';
+    letter-spacing: 3px;
+    padding: 2px 5px;
+}
+.StepsAndTime .steps{
+    color: red;
+}
+#letter-space{
+    min-width: 45px;
+}
+.fa-repeat:before {
+    content: "\f363";
+    position: absolute;
+    top: calc(100% + 1px);
+    inset-inline-start: 3px;
+    cursor: pointer;
+}
+.fa-repeat:hover{
+    color: #009688;
+}
+@media (max-width:780px){
+    .text1,.text2{
+        display: block;
+        white-space: nowrap;
+    }
+    .wordfinal, .exact{
+            font-size: 15px;
+    }
+
+    .hangmanBody .head{
+        top: 30%;
+    }
+    .hangmanBody .shen{
+        top: 14%;
+    }
+    .lefthand,.righthand{
+        bottom: 40%;
+    }
+    main{
+        max-width: 90vw;
+    }
+    .rightleg,.leftleg{
+        bottom: 20%;
+    }
+    .letter-style{
+        width: 15px;
+        height: 15px;
+        padding: 10px;
+        font-weight: 16px;
+    }
+    header .category-selected{
+        font-size: 12px;
+    }
+    header .category{
+        font-size: 12px;
+    }
+    .game-Title{
+        font-size:16px;
+    }
+    .menu .fa-regular{
+        font-size: 18px;
+    }
+    .TheWordChosen{
+        font-size: clamp(.6rem, 1.2vw, 1.4rem);
+    }
+    .StepsAndTime .time, .StepsAndTime .steps{
+        min-width: 20px;
+        font-size: 12px;
+        letter-spacing: 1px;
+        padding: 0px;
+        padding: 2px 5px;
+        font-weight: 16px;
+    }
+    footer{
+        height: auto;
+    }
+    footer input{
+        width: 16px;
+        height: 18px;
+        font-size: 16px;
+        border-width: 2px;
+    }
+    .article-right-side{
+        gap: 10px;
+        padding: 10px;
+    }
+    .articles-div{
+        gap: 0px;
+    }
+    .fa-repeat{
+        font-size: 10px;
+    }
+ 
+}
+@media (max-width: 480px){
+    .ForExistingLetter{
+        font-size: 12px;
+    }
+    .TheWordChosen {
+        flex-direction: column;
+    }
+    .articles-div {
+        grid-template-columns: 1fr;
+        gap: 5px;
+    }
+    /* main{
+        margin: 0 6px;
+    } */
+    header {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .game-Title{
+        grid-column: 1;
+    }
+    .menu{
+        grid-column: 2 / 3;
+        grid-row: 2 / 3;
+    }
+    .category-selected{
+        grid-row: 2 / 3;
+        grid-column: 1 / 2;
+        font-size: 11px;
+    }
+    header .category,header .wordFrom{
+        font-size: 9px;
+        font-weight: normal;
+    }
+    .div1,.div2{
+        grid-template-columns: 85px 1fr;
+        font-size: 12px;
+    }
+    #categorySelect, #languageCategory {
+        min-width: 110px;
+        padding: 0px;
+    }
+    .startBtn,.StartGameAgainBtn{
+        font-size: 16px;
+    }
+    .exact{
+        font-size: 12px;
+        font-weight: normal;
+    }
+    .wordfinal{
+        margin-inline-start: 2px;
+        font-size: 12px;
+        font-weight: normal;
+    }
+    .StartGameAgainBtn{
+        min-width: 100px;
+        padding: 1px 5px;
+    }
+    .GameTitle{
+        font-size: 16px;
+        margin-bottom: 16px;
+    }
+    .wordfinal,.exact{
+        font-size: 12px;
+    }
+    .rightleg,.leftleg{
+        width: 10%;
+    }
+    .leftleg{
+        left: calc(51% + var(--value-2px));
+
+    }
+    footer{
+        gap: 5px;
+    }
+    .divForMenu .MainDivForIcon{
+        font-size: 10px;
+    }
+    .divForMenu{
+        min-width: 200px;
+        padding: var(--value-3px);
+    }
+    .MainDivForIcon .doneBtn{
+        font-size: 16px;
+        margin-top: 0px;
+        padding: 0px;
+    }
+}
+/* @media(max-width:255px){
+    .rightleg, .leftleg {
+        bottom: 22%;
+    }
+    .rightleg{
+        left: calc(61% - var(--value-2px));
+    }
+} */
