@@ -542,7 +542,7 @@ header p{
 .fa-repeat:hover{
     color: #009688;
 }
-@media (max-width:780px){
+/* @media (max-width:780px){
     .text1,.text2{
         display: block;
         white-space: nowrap;
@@ -615,8 +615,8 @@ header p{
         font-size: 10px;
     }
  
-}
-/* @media (max-width:480px){
+} */
+@media (max-width:480px){
     .ForExistingLetter{
         font-size: 12px;
     }
@@ -627,10 +627,10 @@ header p{
         grid-template-columns: 1fr;
         gap: 5px;
     }
-    /* main{
+     main{
         margin: 0 6px;
-    } */
-    /* header {
+    } 
+     header {
         display: grid;
         grid-template-columns: 1fr;
     }
@@ -703,7 +703,10 @@ header p{
         margin-top: 0px;
         padding: 0px;
     } 
-    } 
+}
+    
+    
+
 /* @media(max-width:255px){
     .rightleg, .leftleg {
         bottom: 22%;
@@ -711,4 +714,4 @@ header p{
     .rightleg{
         left: calc(61% - var(--value-2px));
     }
-} */
+}
