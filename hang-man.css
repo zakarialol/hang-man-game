@@ -616,7 +616,7 @@ header p{
     }
  
 }
-@media (max-width:480px){
+/* @media (max-width:480px){
     .ForExistingLetter{
         font-size: 12px;
     }
@@ -630,7 +630,7 @@ header p{
     /* main{
         margin: 0 6px;
     } */
-    header {
+    /* header {
         display: grid;
         grid-template-columns: 1fr;
     }
@@ -702,8 +702,8 @@ header p{
         font-size: 16px;
         margin-top: 0px;
         padding: 0px;
-    }
-}
+    } 
+    } 
 /* @media(max-width:255px){
     .rightleg, .leftleg {
         bottom: 22%;
