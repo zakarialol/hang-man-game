@@ -1,0 +1,16 @@
+{
+  "remove-empty-rulesets": true,
+  "sort-order-fallback": "abc",
+  "always-semicolon": true,
+  "space-before-opening-brace": " ",
+  "leading-zero": false,
+  "strip-spaces": true,
+  "unitless-zero": true,
+  "merge-selectors": true
+}
+{
+  "editor.formatOnSave": true,
+  "[css]": {
+    "editor.formatOnSave": false
+  }
+}
