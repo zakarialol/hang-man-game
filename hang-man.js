@@ -973,7 +973,7 @@ function calculatethetimeFunc(){
             clearInterval(countDown)
         }
 
-    let currentdate = Date.now() + (1.5*60* 1000)
+    let currentdate = Date.now() + (90 * 1000)
     let remining = (currentdate  - Date.now()) 
 
     countDownHoler.textContent = `${Math.max(0 , Math.floor(remining / (1000 * 60))).toString().padStart(2,'0')} : ${Math.max(0 , Math.ceil((remining % (1000 * 60))/(1000))).toString().padStart(2,'0')}`
